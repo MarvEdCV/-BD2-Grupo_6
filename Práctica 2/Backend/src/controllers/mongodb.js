@@ -2,6 +2,7 @@ const Paciente = require('../models/paciente');
 const LogActividad = require('../models/log_actividad');
 const Habitacion = require('../models/habitacion');
 const LogHabitacion = require('../models/log_habitacion');
+
 module.exports = {
 
     index: async (req,res,next) => {
@@ -107,6 +108,220 @@ module.exports = {
     getPacientes: async (req,res,next) => {
         const pacientes = await Paciente.find({});
         res.status(200).json(pacientes);
-    }
+    },
 
+    consulta1: async (req,res,next) => {
+        const menores = await Paciente.count({
+            edad:{$lt:18}
+        });
+        const medianaEdad = await Paciente.count({
+            $and:[
+                {edad:{$lte:64}},
+                {edad:{$gte:18}}
+            ]
+        });
+        const mayores = await Paciente.count({
+            edad:{$gt:64}
+        });
+        datos = {
+            group: 6,
+            query: 1,
+            data: {
+                pediatricos:menores,
+                "mediana edad": medianaEdad,
+                geriatrico: mayores
+            }
+        }
+        res.status(200).json(datos);
+    },
+
+    consulta2: async (req,res,next) => {
+        const consulta = await LogActividad.aggregate(
+            [
+                {
+                    $group:{
+                        _id:{numero_habitacion:'$habitacionx'},
+                        num_pacientes:{$sum:1}
+                    }
+                },
+                {
+                    $sort: {_id: 1}
+                }
+            ]);
+        datos = {
+            group: 6,
+            query: 2,
+            data: consulta
+        }
+        res.status(200).json(datos);
+    },
+    consulta3: async (req,res,next) => {
+        const consulta = await Paciente.aggregate([
+            {
+                $group:{
+                    _id:{genero:'$genero'},
+                    cantidad_pacientes:{$sum:1}
+                }
+            },
+            {
+                $sort:{cantidad_pacientes:1}
+            }
+        ]);
+        datos = {
+            group: 6,
+            query: 3,
+            data: consulta
+        }
+        res.status(200).json(datos);
+    },
+    consulta4: async (req,res,next) => {
+        const consulta = await Paciente.aggregate([
+            {
+                $group:{
+                    _id:{edad:'$edad'},
+                    cantidad_pacientes:{$sum:1}
+                }
+            },
+            {
+                $sort:{cantidad_pacientes:-1}
+            },
+            {
+                $limit : 5
+            }
+        ])
+        datos = {
+            group: 6,
+            query: 4,
+            data: consulta
+        }
+        res.status(200).json(datos);
+    },
+    consulta5: async (req,res,next) => {
+        const consulta = await Paciente.aggregate([
+            {
+                $group:{
+                    _id:{edad:'$edad'},
+                    cantidad_pacientes:{$sum:1}
+                }
+            },
+            {
+                $sort:{cantidad_pacientes:1}
+            },
+            {
+                $limit : 5
+            }
+        ])
+        datos = {
+            group: 6,
+            query: 5,
+            data: consulta
+        }
+        res.status(200).json(datos);
+    },
+    consulta6: async (req,res,next) => {
+        const consulta = await LogActividad.aggregate([
+            {
+                $group:{
+                    _id:{habitacion:'$habitacionx'},
+                    cantidad_usos:{$sum:1}
+                }
+            },
+            {
+                $sort:{cantidad_usos:-1}
+            },
+            {
+                $limit : 5
+            }
+        ])
+        datos = {
+            group: 6,
+            query: 6,
+            data: consulta
+        }
+        res.status(200).json(datos);
+    },
+    consulta7: async (req,res,next) => {
+        const consulta = await LogActividad.aggregate([
+            {
+                $group:{
+                    _id:{habitacion:'$habitacionx'},
+                    cantidad_usos:{$sum:1}
+                }
+            },
+            {
+                $sort:{cantidad_usos:1}
+            },
+            {
+                $limit : 5
+            }
+        ])
+        datos = {
+            group: 6,
+            query: 7,
+            data: consulta
+        }
+        res.status(200).json(datos);
+    },
+    consulta8: async (req,res,next) => {
+        const consulta = await LogHabitacion.aggregate([
+            {$match:{statusx:'Inicia limpieza.'}},
+            {
+                $group:{
+                    _id:{habitacion:'$habitacionx'},
+                    cantidad_limpieza:{$sum:1}
+                }
+            },
+            {
+                $sort:{cantidad_limpieza:-1}
+            },
+            {$limit : 5}
+        ])
+        datos = {
+            group: 6,
+            query: 8,
+            data: consulta
+        }
+        res.status(200).json(datos);
+    },
+    consulta9: async (req,res,next) => {
+        const consulta = await LogHabitacion.aggregate([
+            {$match:{statusx:'Inicia limpieza.'}},
+            {
+                $group:{
+                    _id:{habitacion:'$habitacionx'},
+                    cantidad_limpieza:{$sum:1}
+                }
+            },
+            {
+                $sort:{cantidad_limpieza:1}
+            },
+            {$limit : 5}
+        ])
+        datos = {
+            group: 6,
+            query: 9,
+            data: consulta
+        }
+        res.status(200).json(datos);
+    },
+    consulta10: async (req,res,next) => {
+        const consulta = await LogActividad.aggregate([
+            {
+                $group:{
+                    _id:{$dayOfMonth:'$timestampx',$month:'$timestampx',$year:'$timestampx'},
+                    cantidad_pacientes:{$sum:'$pacientex'}
+                }
+            },
+            {
+                $sort:{cantidad_pacientes:-1}
+            },
+            {$limit : 1}
+        ])
+        datos = {
+            group: 6,
+            query: 10,
+            data: consulta
+        }
+        res.status(200).json(datos);
+    }
 }
