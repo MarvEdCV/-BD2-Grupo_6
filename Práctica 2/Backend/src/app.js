@@ -7,13 +7,13 @@ const app = express();
 const mongoRoutes = require('./routes/mongodb');
 const cassandraRoutes = require('./routes/cassandradb');
 
-/*mongoose.set('strictQuery',false);
+mongoose.set('strictQuery',false);
 mongoose.set('strictPopulate',false);
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://127.0.0.1:27017/backend_mongodb')
     .then(db => console.log('Mongo is connected'))
     .catch(err => console.log(err));
-*/
+
 
 
 //settings
