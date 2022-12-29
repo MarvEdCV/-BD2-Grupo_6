@@ -1,0 +1,58 @@
+<h1 class="texto2">Registro</h1>
+<div style="height: 100%; width: 100%; padding-left: 25%; padding-top: 3%; text-align: center;">
+    <form class="custom-form2" method="post">
+      <table class="tabla2">
+        <tr>
+          <td [width]="400">
+           
+                <select type="text" [(ngModel)]="base" name="base" class="select1">
+                    <option value="" disabled selected hidden>Seleccione una base de datos</option>
+                  <option [ngValue]="1" >MongoDB</option>
+                  <option [ngValue]="2" >Cassandra</option>
+                  <option [ngValue]="3" >MySQL</option>
+
+                </select>
+              
+          </td>
+          <td [width]="400">
+            
+            <select type="text" [(ngModel)]="tipolog" name="tipolog" class="select1">
+                <option value="" disabled selected hidden>Seleccione tipo de log</option>
+                <option [ngValue]="1" >LogActividad</option>
+                <option [ngValue]="2" >LogHabitacion</option>
+              </select>
+          </td>
+        </tr>
+        <tr>
+          <td [width]="400">
+            <select type="text" [(ngModel)]="paciente" name="paciente" class="select1">
+                <option value="" disabled selected hidden>Seleccione un paciente</option>
+                <option [ngValue]="1" >LogActividad</option>
+                <option [ngValue]="2" >LogPaciente</option>
+              </select>
+          </td>
+          <td [width]="400">
+            <select type="text" [(ngModel)]="habitacion" name="habitacion" class="select1">
+                <option value="" disabled selected hidden>Seleccione una Habitacion</option>
+                <option [ngValue]="1" >LogActividad</option>
+                <option [ngValue]="2" >LogPaciente</option>
+              </select>
+          </td>
+        </tr>
+        <tr>
+          <td [width]="400" colspan="2">
+            <input type="text" [(ngModel)]="descripcion" name="descripcion" placeholder="Descripcion"
+              required="required" />
+        
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button type="submit" class="texto2" (click)="registrarlog()" > <a class="nav-link">Agregar</a></button>
+
+          </td>
+        </tr>
+      </table>
+    </form>
+
+</div>

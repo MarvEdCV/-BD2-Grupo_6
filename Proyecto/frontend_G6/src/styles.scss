@@ -1,0 +1,366 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+h1 {
+    margin: 0;
+    padding: 0;
+    color:black;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+  }
+  .tit {
+    margin: 0;
+    padding: 0;
+    color:white;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-size: 150%;
+  }
+
+  hr {
+    height: 4px;
+    background-color: black;
+  }
+
+  .centrado{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+  }
+
+  h3 {
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+
+  }
+
+ 
+  .hr2 {
+    height: 500px;
+    width: 10px;
+    align-items: center;
+    background-color: white;
+  }
+.video{
+    text-align: center;
+} 
+.tabla1{
+    color: aliceblue;
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+} 
+.tabla{
+    color: aliceblue;
+    table-layout: fixed;
+    width: 100%;
+} 
+.tabla2{
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+} 
+.tabla21{
+  table-layout: fixed;
+  width: 35%;
+  text-align: center;
+} 
+.tabla22{
+  table-layout: fixed;
+ 
+  
+} 
+.tabladatos{
+  table-layout: fixed;
+  width: 100%;
+} 
+.letra{
+    font-family: 'Courier New', Courier, monospace;
+} 
+.nav-link{
+    color: black;
+}
+a{
+    color: black;
+}
+.nav-item{
+    text-align: center;
+}
+
+.custom-form {
+  max-width: 40%;
+  margin: 0px auto;
+  border-radius: 2.5rem;
+  background-color:transparent;
+  box-shadow: transparent;
+  color: black;
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+.input1{
+  display: block;
+  margin: 0.25rem 0;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: solid;
+  border-color: black;
+  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px
+      rgba(0, 0, 0, 0.1);
+  background: white;
+
+}
+.butom1{
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: none;
+  font-size: 0.875rem;
+  color: white;
+  border: solid;
+  border-color: black;
+  font-weight: bold;
+  background-color: white;
+  width: 100%;
+  display: block;
+  padding: 0.875rem 1rem;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px rgb(170, 172, 169), -3px -3px 8px white;
+  cursor: pointer;
+  text-align: center;
+
+}
+.custom-form input {
+  display: block;
+  margin: 2rem 0;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: solid;
+  border-color: black;
+  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px
+      rgba(0, 0, 0, 0.1);
+  background: white;
+}
+.custom-form select {
+  
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: solid;
+  border-color: black;
+  background: white;
+}
+
+.select1 {
+  
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 100%;
+  border: solid;
+  border-color: black;
+  background: white;
+}
+
+.custom-form2 {
+  text-align: center;
+  max-width: 70%;
+  border-radius: 2.5rem;
+  background-color:transparent;
+  box-shadow: transparent;
+  color: black;
+  
+ 
+}
+.custom-form2 input {
+  display: block;
+  margin: 1rem 0;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: solid;
+  border-color: black;
+  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px
+      rgba(0, 0, 0, 0.1);
+  background: white;
+}
+.custom-form2 select {
+  
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: solid;
+  border-color: black;
+  background: white;
+}
+
+.custom-form2 button {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: none;
+  font-size: 0.875rem;
+  color: white;
+  border: solid;
+  border-color: black;
+  font-weight: bold;
+  background-color: white;
+  width: 100%;
+  display: block;
+  padding: 0.875rem 1rem;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px rgb(170, 172, 169), -3px -3px 8px white;
+  cursor: pointer;
+  text-align: center;
+}
+.alto{
+  height: 100px;
+}
+.custom-form button {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: none;
+  font-size: 0.875rem;
+  color: white;
+  border: solid;
+  border-color: black;
+  font-weight: bold;
+  background-color: white;
+  width: 100%;
+  display: block;
+  padding: 0.875rem 1rem;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px rgb(170, 172, 169), -3px -3px 8px white;
+  cursor: pointer;
+  text-align: center;
+}
+.custom-form3 {
+  max-width: 40%;
+  margin: 0px auto;
+  border-radius: 2.5rem;
+  background-color:transparent;
+  box-shadow: transparent;
+  color: black;
+ 
+}
+.custom-form3 input {
+  display: block;
+  margin: 1rem 0;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: solid;
+  border-color: black;
+  box-shadow: inset -5px -5px 15px rgba(255, 255, 255, 0.8), inset 5px 5px 10px
+      rgba(0, 0, 0, 0.1);
+  background: aqua;
+}
+.custom-form3 button {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: none;
+  font-size: 0.875rem;
+  color: white;
+  border: solid;
+  border-color: black;
+  font-weight: bold;
+  background-color: white;
+  width: 100%;
+  display: block;
+  padding: 0.875rem 1rem;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px rgb(170, 172, 169), -3px -3px 8px white;
+  cursor: pointer;
+  text-align: center;
+}
+.texto{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+} 
+.texto22{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding-top: 5%;
+    color: white;
+} 
+.texto2{
+    font-family: cursive;
+    text-align: center;
+    padding-left: 5%;
+    color: black;
+} 
+.espacio{
+    height: 40px;
+}
+.espacio2{
+    width: 100px;
+}
+.espacio4{
+  width: 1050px;
+}
+.espacio3{
+  width: 60px;
+}
+
+  button{
+    width: 250px;
+  }
+  .hidden {
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+  }
+  .bar1{
+    height: 10px;
+    background-color: black;
+}
+
+.combo{
+    width: 600px;
+    height: 48px;
+}
+
+.menu{
+    width: 270px;
+    float: left;
+    height:  1200px;
+    margin-left: 10px;
+  
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+.contenedor{
+    width:1170px; 
+    float:right; 
+    background: white; 
+    height: 750px;
+    margin: 20px
+}
+.general{
+    width: 100%;
+    height: 100%;
+}
+#boton{
+    width: 250px;
+
+}
+.tablaP{
+  width: 1800px;
+    float:right;
+    margin: 50px 
+   
+}
+.combo2{
+    width: 250px;
+    height: 48px;
+}
+.tam{
+    width: 10px;
+}
+#buttonop {
+  text-align: center;
+  width: 120px;
+  height: 30px;
+}
