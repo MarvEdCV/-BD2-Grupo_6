@@ -53,7 +53,7 @@ router.get('/consulta-6',consulta6),
 router.get('/consulta-7',consulta7),
 router.get('/consulta-8',consulta8),
 router.get('/consulta-9',consulta9),
-router.get('/consulta-10',consulta10)
+router.get('/consulta-10',consulta9)
 
 
 

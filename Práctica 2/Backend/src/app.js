@@ -5,7 +5,8 @@ const mongoose = require('mongoose');
 const app = express();
 
 const mongoRoutes = require('./routes/mongodb');
-const cassandraRoutes = require('./routes/cassandradb');
+const mysqlRoutes = require('./routes/mysql');
+//const cassandraRoutes = require('./routes/cassandradb');
 
 mongoose.set('strictQuery',false);
 mongoose.set('strictPopulate',false);
@@ -25,7 +26,9 @@ app.use(bodyParser.json());
 
 // routes
 app.use('/mongo',mongoRoutes);
-app.use('/cassandra', cassandraRoutes)
+app.use('/mysql',mysqlRoutes);
+
+//app.use('/cassandra', cassandraRoutes)
 
 //Start server
 app.listen(app.get('port'), () => {
